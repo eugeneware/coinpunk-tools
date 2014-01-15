@@ -8,7 +8,7 @@
   "bin": {
     "coinpunk-import": "importKeys.js",
     "coinpunk-export": "extractKeys.js"
-  }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/eugeneware/coinpunk-tools"
