@@ -1,0 +1,37 @@
+{
+  "name": "coinpunk-tools",
+  "version": "0.0.1",
+  "description": "Tools for importing and exporting bitcoin private keys with coinpunk",
+  "scripts": {
+    "test": "node_modules/.bin/tape test/*.js"
+  },
+  "bin": {
+    "coinpunk-import": "importKeys.js",
+    "coinpunk-export": "extractKeys.js"
+  }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eugeneware/coinpunk-tools"
+  },
+  "keywords": [
+    "coinpunk",
+    "bitcoin",
+    "import",
+    "export",
+    "key",
+    "bitcoinjs"
+  ],
+  "author": "Eugene Ware <eugene@noblesamurai.com>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/eugeneware/coinpunk-tools/issues"
+  },
+  "dependencies": {
+    "sjcl": "~1.0.0",
+    "coinpunk": "git+https://github.com/kyledrake/coinpunk.git"
+  },
+  "devDependencies": {
+    "redtape": "~0.1.0",
+    "tape": "~2.3.2"
+  }
+}
