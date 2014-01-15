@@ -1,6 +1,6 @@
 {
   "name": "coinpunk-tools",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Tools for importing and exporting bitcoin private keys with coinpunk",
   "scripts": {
     "test": "node_modules/.bin/tape test/*.js"
