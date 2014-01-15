@@ -23,7 +23,11 @@ var payload = {
   transactions: [],
   unspent: []
 };
-var privateKeys = fs.readFileSync(privateKeyPath, { encoding: 'utf8' }).split('\n');
+var privateKeys = fs.readFileSync(privateKeyPath, { encoding: 'utf8' })
+  .split('\n')
+  .filter(function (privateKey) {
+    return !!privateKey;
+  });
 privateKeys.forEach(function (privateKey, i) {
   var k = new ECKey(privateKey);
   var publicKey = new Address(k.getBitcoinAddress().hash).toString();
