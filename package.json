@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "sjcl": "~1.0.0",
-    "coinpunk": "git+https://github.com/kyledrake/coinpunk.git"
+    "bitcoinjs-lib": "git+https://github.com/kyledrake/bitcoinjs-lib.git"
   },
   "devDependencies": {
     "redtape": "~0.1.0",

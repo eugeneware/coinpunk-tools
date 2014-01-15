@@ -3,8 +3,8 @@
 var path = require('path'),
     fs = require('fs'),
     sjcl = require('sjcl'),
-    Address = require('coinpunk/lib/bitcoinjs/address'),
-    ECKey = require('coinpunk/lib/bitcoinjs/eckey');
+    Address = require('bitcoinjs-lib/src/address'),
+    ECKey = require('bitcoinjs-lib/src/eckey');
 
 if (process.argv.length != 6) {
   console.log('Usage: coinpunk-import [email] [password] [privateKeyFile] [coinpunkWallet]');
