@@ -3,7 +3,6 @@
 var path = require('path'),
     fs = require('fs'),
     sjcl = require('sjcl'),
-    Address = require('bitcoinjs-lib/src/address'),
     ECKey = require('bitcoinjs-lib/src/eckey');
 
 if (process.argv.length != 6) {
@@ -30,11 +29,11 @@ var privateKeys = fs.readFileSync(privateKeyPath, { encoding: 'utf8' })
   });
 privateKeys.forEach(function (privateKey, i) {
   var k = new ECKey(privateKey);
-  var publicKey = new Address(k.getBitcoinAddress().hash).toString();
+  var publicKey = k.getBitcoinAddress().toString();
   var keyPair = {
     key: privateKey,
     publicKey: new Buffer(k.getPubKeyHash()).toString('hex'),
-    address: new Address(k.getBitcoinAddress().hash).toString(),
+    address: k.getBitcoinAddress().toString(),
     isChange: false,
     name: "Imported Key " + (i + 1)
   };
